@@ -1058,6 +1058,8 @@ public class NetworkController extends BroadcastReceiver implements DemoMode {
                     // Tablets, basically
                     mobileLabel = "";
                 }
+            } else if (hasService() || emergencyOnly) {
+                    mobileLabel = mNetworkName;
             } else {
                 mobileLabel
                     = context.getString(R.string.status_bar_settings_signal_meter_disconnected);
